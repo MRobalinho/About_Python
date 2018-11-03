@@ -57,3 +57,52 @@ df.index.values
 
 ### If index does not exist
 df.set_index('column_name_to_use', inplace=True)
+
+### Create list comprehension of the columns you want to lose
+columns_to_drop = [column_names[i] for i in [1, 3, 5]]
+
+### Drop unwanted columns
+df.drop(columns_to_drop, inplace=True, axis=1)
+
+## What To Do With NaN
+#### Fill NaN with ' '
+df['col'] = df['col'].fillna(' ')
+#### Fill NaN with 99
+df['col'] = df['col'].fillna(99)
+#### Fill NaN with the mean of the column
+df['col'] = df['col'].fillna(df['col'].mean())
+
+## Propagate 
+<br /> Propagate non-null values forward or backwards by putting method=’pad’ as the method argument. It will fill the next value in the dataframe with the previous non-NaN value. Maybe you just want to fill one value (limit=1)or you want to fill all the values. Whatever it is make sure it is consistent with the rest of your data cleaning.
+<br /><b>df = pd.DataFrame(data={'col1':[np.nan, np.nan, 2,3,4, np.nan, np.nan]})</b>
+<br />    col1
+<br />0   NaN
+<br />1   NaN
+<br />2   2.0
+<br />3   3.0
+<br />4   4.0 # This is the value to fill forward
+<br />5   NaN
+<br />6   NaN
+<br /><b>df.fillna(method='pad', limit=1)</b>
+<br />    col1
+<br />0   NaN
+<br />1   NaN
+<br />2   2.0
+<br />3   3.0
+<br />4   4.0
+<br />5   4.0 # Filled forward
+<br />6   NaN
+
+### Limited to forward filling, but also backfilling with bfill.
+
+<br />Fill the first two NaN values with the first available value
+<br /><b>df.fillna(method='bfill')
+<br />    col1
+<br />0   2.0 # Filled
+<br />1   2.0 # Filled
+<br />2   2.0 
+<br />3   3.0
+<br />4   4.0
+<br />5   NaN
+<br />6   NaN
+  
