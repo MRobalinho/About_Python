@@ -12,9 +12,11 @@ About Python
 '>conda install pandas=0.20.3
 <br />or
 <br />'>>pip install numpy==1.10.4
-<br />$ pip install SomePackage            # latest version
-<br />$ pip install SomePackage==1.0.4     # specific version
-<br />$ pip install 'SomePackage>=1.0.4'   # minimum version
+
+<br />To install:	Use the command:
+<br />The latest version  >	pip install foo --user
+<br />A particular version (e.g., foo 1.0.3)>	pip install foo==1.0.3 --user
+<br />A minimum version (e.g., foo 2.0)	> pip install 'foo>=2.0' --user
 
 ### Verify Python version
 run cmd comand as an admnistrator
@@ -24,7 +26,7 @@ run cmd comand as an admnistrator
 ------
 
 ### To Install a package version
-python install pandas==version --
+python install pandas==version --user commands
 
 ## Cleaning and Prepping Data with Python for Data Science — Best Practices and Helpful Packages
 <br />https://medium.com/@rrfd/cleaning-and-prepping-data-with-python-for-data-science-best-practices-and-helpful-packages-af1edfbe2a3
