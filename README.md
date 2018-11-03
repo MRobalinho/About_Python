@@ -106,3 +106,9 @@ df['col'] = df['col'].fillna(df['col'].mean())
 <br />5   NaN
 <br />6   NaN
   
+### Drop any rows which have any nans
+df.dropna()
+### Drop columns that have any nans
+df.dropna(axis=1)
+### Only drop columns which have at least 90% non-NaNs
+df.dropna(thresh=int(df.shape[0] * .9), axis=1)
