@@ -2,16 +2,16 @@
 About Python
 ----
 ### Help python
-'>python /?
+>python /?
 
 ### Create another conda environement (name_of_my_env)
-'>conda create -n name_of_my_env python=2.7
+>conda create -n name_of_my_env python=2.7
 <br /> '>activate name_of_my_env 
 
 ### Install another version of package
-'>conda install pandas=0.20.3
+>conda install pandas=0.20.3
 <br />or
-<br />'>>pip install numpy==1.10.4
+<br />'>pip install numpy==1.10.4
 
 <br />To install:	Use the command:
 <br />The latest version  >	pip install foo --user
@@ -20,7 +20,7 @@ About Python
 
 ### Verify Python version
 run cmd comand as an admnistrator
-<br />'>python --version
+<br />>python --version
 <br />Python 3.4.3
 
 ------
