@@ -113,3 +113,92 @@ df.dropna(axis=1)
 ### Only drop columns which have at least 90% non-NaNs
 df.dropna(thresh=int(df.shape[0] * .9), axis=1)
 <br/>The parameter thresh=N requires that a column has at least N non-NaNs to survive. 
+
+## np.where(if_this_is_true, do_this, else_do_that)
+<br/>Follow this syntax:
+<br/>np.where(if_this_condition_is_true, do_this, else_this)
+<br/>Example:
+<br/>df['new_column'] = np.where(df[i] > 10, 'foo', 'bar) 
+
+## Assert
+<br/>Simple dataframe to test:
+<br/>df = pd.DataFrame(data={'col1':np.random.randint(0, 10, 10), 'col2':np.random.randint(-10, 10, 10)})
+<br/>
+<br/> Index   col1  col2
+<br/>0     0     6
+<br/>1     6    -1
+<br/>2     8     4
+<br/>3     0     5
+<br/>4     3    -7
+<br/>5     4    -5
+<br/>6     3   -10
+<br/>7     9    -8
+<br/>8     0     4
+<br/>9     7    -4
+<br/>
+<br/>test if all the values in col1 are >= 0 by using the built in method assert
+<br/>assert(df['col1'] >= 0 ).all() # Should return nothing
+
+<br/>Let’s test is any of the values are strings.
+<br/>assert(df['col1'] != str).any() # Should return nothing
+
+<br/>Testing the two columns to see if they are equal
+<br/>assert(df['col1'] == df['col2']).all()
+
+## Package pandas also includes a testing package
+<br/>import pandas.util.testing as tm
+<br/>tm.assert_series_equal(df['col1'], df['col2'])
+<br/>
+<br/>AssertionError: Series are different
+<br/>Series values are different (100.0 %)
+<br/>[left]:  [0, 6, 8, 0, 3, 4, 3, 9, 0, 7]
+<br/>[right]: [6, -1, 4, 5, -7, -5, -10, -8, 4, -4]
+
+## The beautifier package 
+Is able to help you clean up some commonly used patterns for emails or URLs. It’s nothing fancy but can quickly help with clean up.
+<br/>pip3 install beautifier
+<br/>from beautifier import Email, Url
+<br/>email_string = 'foo@bar.com'
+<br/>email = Email(email_string)
+<br/>print(email.domain)
+<br/>print(email.username)
+<br/>print(email.is_free_email)
+<br/>>>
+<br/>bar.com
+<br/>foo
+<br/>False
+<br/>url_string = 'https://github.com/labtocat/beautifier/blob/master/beautifier/__init__.py'
+<br/>url = Url(url_string)
+<br/>print(url.param)
+<br/>print(url.username)
+<br/>print(url.domain)
+<br/>>>
+<br/>None
+<br/>{'msg': 'feature is currently available only with linkedin urls'}
+<br/>github.com
+
+## Dedupe
+
+<br/>This is a library that uses machine learning to perform de-duplication and entity resolution quickly on structured data. 
+<br/> More information in https://medium.com/district-data-labs/basics-of-entity-resolution-with-python-and-dedupe-bc87440b64d4
+
+<br/> Set fields 
+<br/>fields = [
+<br/>       {'field' : 'Source', 'type': 'Set'},
+<br/>       {'field' : 'Site name', 'type': 'String'},
+<br/>       {'field' : 'Address', 'type': 'String'},
+<br/>       {'field' : 'Zip', 'type': 'Exact', 'has missing' : True},
+<br/>       {'field' : 'Phone', 'type': 'String', 'has missing' : True},
+<br/>       {'field' : 'Email Address', 'type': 'String', 'has missing' : True},
+<br/>        ]
+
+<br/>Pass in our model
+<br/>deduper = dedupe.Dedupe(fields)
+<br/> Check if it is working
+<br/>deduper
+<br/>>>
+<br/><dedupe.api.Dedupe at 0x11535bbe0>
+<br/> Feed some sample data in ... 15000 records
+<br/>deduper.sample(df, 15000)
+
+<br/>dedupe.consoleLabel(deduper)
