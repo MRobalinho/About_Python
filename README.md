@@ -23,10 +23,10 @@ run cmd comand as an admnistrator
 <br />>python --version
 <br />Python 3.4.3
 
-------
-
 ### To Install a package version
 python install pandas==version --user commands
+
+------
 
 ## Cleaning and Prepping Data with Python for Data Science — Best Practices and Helpful Packages
 <br />https://medium.com/@rrfd/cleaning-and-prepping-data-with-python-for-data-science-best-practices-and-helpful-packages-af1edfbe2a3
@@ -48,7 +48,6 @@ import os
 
 ### Now I can finally import Foo from the funct package
 from func import Foo
-
 -----
 ### Check the index values
 df.index.values
