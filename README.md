@@ -112,3 +112,4 @@ df.dropna()
 df.dropna(axis=1)
 ### Only drop columns which have at least 90% non-NaNs
 df.dropna(thresh=int(df.shape[0] * .9), axis=1)
+<br/>The parameter thresh=N requires that a column has at least N non-NaNs to survive. 
