@@ -96,7 +96,7 @@ df['col'] = df['col'].fillna(df['col'].mean())
 ### Limited to forward filling, but also backfilling with bfill.
 
 <br />Fill the first two NaN values with the first available value
-<br /><b>df.fillna(method='bfill')
+<br /><b>df.fillna(method='bfill')</b>
 <br />    col1
 <br />0   2.0 # Filled
 <br />1   2.0 # Filled
