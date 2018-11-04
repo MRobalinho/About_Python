@@ -36,7 +36,7 @@ python install pandas==version --user commands
 <br />Root environment is named as base, You can use following command:
 <br />conda create --name <env_name> --clone base
 
-### List all the packages installed in conda environment with following command
+### List all the packages installed in conda environment and his version
 <br />conda list -n <env_name>
 
 ## Cleaning and Prepping Data with Python for Data Science — Best Practices and Helpful Packages
