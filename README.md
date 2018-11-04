@@ -1,7 +1,7 @@
 # About_Python
 About Python
-----
-# CONDA
+-------------------
+## CONDA
 ### Rename  a conda environment
 conda create --name new_name --clone old_name
 <br />Root environment is named as base, You can use following command:
@@ -18,7 +18,7 @@ conda create -n name_of_my_env python=2.7
 CMD.exe  (as admnistrator )
 <br />conda info --envs
 ------------------------
-# PYTHON
+## PYTHON
 ### Help python
 >python /?
 
@@ -40,7 +40,7 @@ run cmd comand as an admnistrator
 ### To Install a package version
 python install pandas==version --user commands
 
-------
+---------------------
 ## Cleaning and Prepping Data with Python for Data Science — Best Practices and Helpful Packages
 <br />https://medium.com/@rrfd/cleaning-and-prepping-data-with-python-for-data-science-best-practices-and-helpful-packages-af1edfbe2a3
 
