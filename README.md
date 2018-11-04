@@ -1,5 +1,6 @@
 # About_Python
 About Python
+
 -------------------
 ## CONDA
 ### Rename  a conda environment
@@ -17,6 +18,7 @@ conda create -n name_of_my_env python=2.7
 ### Verify instaled Conda environements
 CMD.exe  (as admnistrator )
 <br />conda info --envs
+
 ------------------------
 ## PYTHON
 ### Help python
@@ -61,7 +63,8 @@ import os
 
 ### Now I can finally import Foo from the funct package
 from func import Foo
------
+
+---------
 ### Check the index values
 df.index.values
 
