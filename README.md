@@ -8,6 +8,10 @@ About Python
 >conda create -n name_of_my_env python=2.7
 <br /> '>activate name_of_my_env 
 
+### Verify instaled Conda environements
+<br />CMD.exe  (as admnistrator )
+<br />conda info --envs
+
 ### Install another version of package
 >conda install pandas=0.20.3
 <br />or
@@ -27,6 +31,13 @@ run cmd comand as an admnistrator
 python install pandas==version --user commands
 
 ------
+### Rename  a conda environment
+<br />conda create --name new_name --clone old_name
+<br />Root environment is named as base, You can use following command:
+<br />conda create --name <env_name> --clone base
+
+### List all the packages installed in conda environment with following command
+<br />conda list -n <env_name>
 
 ## Cleaning and Prepping Data with Python for Data Science — Best Practices and Helpful Packages
 <br />https://medium.com/@rrfd/cleaning-and-prepping-data-with-python-for-data-science-best-practices-and-helpful-packages-af1edfbe2a3
@@ -202,3 +213,4 @@ Is able to help you clean up some commonly used patterns for emails or URLs. It�
 <br/>deduper.sample(df, 15000)
 
 <br/>dedupe.consoleLabel(deduper)
+
