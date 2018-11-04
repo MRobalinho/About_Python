@@ -5,15 +5,15 @@ About Python
 >python /?
 
 ### Create another conda environement (name_of_my_env)
->conda create -n name_of_my_env python=2.7
+conda create -n name_of_my_env python=2.7
 <br /> '>activate name_of_my_env 
 
 ### Verify instaled Conda environements
-<br />CMD.exe  (as admnistrator )
+CMD.exe  (as admnistrator )
 <br />conda info --envs
 
 ### Install another version of package
->conda install pandas=0.20.3
+conda install pandas=0.20.3
 <br />or
 <br />'>pip install numpy==1.10.4
 
@@ -32,12 +32,12 @@ python install pandas==version --user commands
 
 ------
 ### Rename  a conda environment
-<br />conda create --name new_name --clone old_name
+conda create --name new_name --clone old_name
 <br />Root environment is named as base, You can use following command:
 <br />conda create --name <env_name> --clone base
 
 ### List all the packages installed in conda environment and his version
-<br />conda list -n <env_name>
+conda list -n <env_name>
 
 ## Cleaning and Prepping Data with Python for Data Science — Best Practices and Helpful Packages
 <br />https://medium.com/@rrfd/cleaning-and-prepping-data-with-python-for-data-science-best-practices-and-helpful-packages-af1edfbe2a3
