@@ -47,6 +47,10 @@ run cmd comand as an admnistrator
 ### To Install a package version
 python install pandas==version --user commands
 
+<br/>As you already created a notebook file, you can easily convert it to an html file. In this format it will be easy for you to share it or put it on a website. So from the prompt :
+
+<br/>jupyter nbconvert --to html --execute YOUR_FILE.ipynb --output OUTPUT.html
+
 ---------------------
 ## Cleaning and Prepping Data with Python for Data Science — Best Practices and Helpful Packages
 <br />https://medium.com/@rrfd/cleaning-and-prepping-data-with-python-for-data-science-best-practices-and-helpful-packages-af1edfbe2a3
