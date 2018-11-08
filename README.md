@@ -24,6 +24,11 @@ CMD.exe  (as admnistrator )
 ### Help python
 >python /?
 
+### Associate Jupyter extension files in Windows
+<br/>pip install nbopen
+<br/>or python -m nbopen.install_win
+
+
 ### Install another version of package
 conda install pandas=0.20.3
 <br />or
