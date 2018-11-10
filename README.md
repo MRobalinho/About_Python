@@ -228,3 +228,11 @@ Is able to help you clean up some commonly used patterns for emails or URLs. Itâ
 
 <br/>dedupe.consoleLabel(deduper)
 
+# Github
+------
+### Include Video at Github Readme
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)]
+(http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title")
+
+### Include Image on Github Readme
+![](image/3037726_Oxford_Street.jpg_output.jpg?raw=true)
