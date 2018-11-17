@@ -24,6 +24,11 @@ CMD.exe  (as admnistrator )
 ### Help python
 >python /?
 
+### Install pip (PIP is a package manager for Python packages, or modules if you like.)
+<br/>cmd.exe (as administrator)
+<br/>easy_install pip
+
+
 ### Associate Jupyter extension files in Windows
 <br/>pip install nbopen
 <br/>or python -m nbopen.install_win
