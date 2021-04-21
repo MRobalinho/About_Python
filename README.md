@@ -1,6 +1,8 @@
 # About_Python
 About Python
 
+Some good materail from arnaldog12
+https://github.com/arnaldog12/Jupyter-Tutoriais
 -------------------
 ## CONDA
 ### Rename  a conda environment
