@@ -2,6 +2,7 @@
 About Python
 
 Some good materail from arnaldog12
+
 https://github.com/arnaldog12/Jupyter-Tutoriais
 -------------------
 ## CONDA
